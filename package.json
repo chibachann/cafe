@@ -1,0 +1,40 @@
+{
+  "dependencies": {
+    "@types/css-modules": "^1.0.2",
+    "@types/react": "^18.2.14",
+    "axios": "^1.4.0",
+    "gatsby": "^4.2.0",
+    "gatsby-plugin-image": "^2.6.0",
+    "gatsby-plugin-manifest": "^4.2.0",
+    "gatsby-plugin-offline": "^4.2.0",
+    "gatsby-plugin-sharp": "^4.2.0",
+    "gatsby-remark-images": "^6.2.0",
+    "gatsby-remark-responsive-iframe": "^5.2.0",
+    "gatsby-source-filesystem": "^4.2.0",
+    "gatsby-source-graphql": "^4.0.0",
+    "gatsby-transformer-remark": "^5.2.0",
+    "gatsby-transformer-sharp": "^4.2.0",
+    "prismjs": "^1.29.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-hook-form": "^7.45.1",
+    "react-image-lightbox": "^5.1.4",
+    "typed-css-modules": "^0.7.2"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "eslint-plugin-react": "^7.26.1",
+    "prettier": "^2.8.0"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "generate-css-types": "tcm -w ./src"
+  }
+}
