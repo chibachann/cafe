@@ -1,9 +1,15 @@
 .articleSection {
-  margin: 4rem 1rem;
+  margin: 2rem 0;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
   padding-bottom: 2rem;
+  background-image: url("/images/index/espresso.sp.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
 }
 
 .articleSection.visible {
@@ -26,7 +32,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #333;
+  background-color: #fff;
   animation: fadeIn 1s ease-in-out 0.4s backwards;
 }
 
@@ -36,7 +42,7 @@
 }
 
 .subheading {
-  color: #333;
+  color: #fff;
   animation: fadeIn 1s ease-in-out 0.6s backwards;
 }
 
@@ -45,20 +51,15 @@
 }
 
 .text {
-  color: #333;
+  color: #fff;
   animation: fadeIn 1s ease-in-out 0.8s backwards;
-}
-
-.image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* モバイル用のスタイル */
 @media (max-width: 767px) {
-  .heading h2 {
-    font-size: 0.9rem;
+  .articleContainer {
+    margin: 0 1rem;
+    padding-top: 2rem;
   }
 
   .subheading {
@@ -68,21 +69,13 @@
   .text {
     font-size: 1.1rem;
   }
-
-  .imageContainer {
-    width: 100%;
-    max-height: 480px;
-  }
-
-  .image {
-    border-radius: 12px;
-  }
 }
 
 /* タブレット用のスタイル */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .articleSection {
-    margin: 4rem 2rem;
+  .articleContainer {
+    margin: 0 2rem;
+    padding-top: 2rem;
   }
 
   .heading h2 {
@@ -96,42 +89,13 @@
   .text {
     font-size: 1.8rem;
   }
-
-  .imageContainer {
-    width: 100%;
-    max-height: 480px;
-  }
-
-  .image {
-    border-radius: 18px;
-  }
 }
 
 /* PC用のスタイル */
 @media (min-width: 1024px) {
-  .articleSection {
-    margin: 4rem 2rem;
-  }
-
-  .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 3rem;
-  }
-
-  .content.reverse {
-    flex-direction: row-reverse;
-  }
-
   .articleContainer {
-    width: 50%;
-    padding-right: 2rem;
-  }
-
-  .content.reverse .articleContainer {
-    padding-right: 0;
-    padding-left: 2rem;
+    margin: 0 4rem;
+    padding-top: 2rem;
   }
 
   .heading h2 {
@@ -143,16 +107,7 @@
   }
 
   .text {
-    font-size: 1.2rem;
-  }
-
-  .imageContainer {
-    width: 50%;
-    height: 500px;
-  }
-
-  .image {
-    border-radius: 18px;
+    font-size: 1.4rem;
   }
 }
 

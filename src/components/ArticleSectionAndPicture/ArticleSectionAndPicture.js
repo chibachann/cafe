@@ -1,8 +1,8 @@
 import * as React from 'react';
-import * as styles from './ArticleSection.module.css';
+import * as styles from './ArticleSectionAndPicture.module.css';
 
 
-const ArticleSection = ({ heading, subheading, description, imagesrc, size, reverse }) => {
+const ArticleSectionAndPicture = ({ heading, subheading, description}) => {
     const [isVisible, setIsVisible] = React.useState(false);
     const sectionRef = React.useRef(null);
 
@@ -28,14 +28,12 @@ const ArticleSection = ({ heading, subheading, description, imagesrc, size, reve
         };
     }, []);
 
-    const imageUrl = imagesrc[size];
-
     return (
         <div
             ref={sectionRef}
             className={`${styles.articleSection} ${isVisible ? styles.visible : ''}`}
         >
-            <div className={`${styles.content} ${reverse ? styles.reverse : ''}`}>
+            
                 <div className={styles.articleContainer}>
                     <div className={styles.heading}>
                         <h2>{heading}</h2>
@@ -49,12 +47,9 @@ const ArticleSection = ({ heading, subheading, description, imagesrc, size, reve
                         ))}
                     </div>
                 </div>
-                <div className={styles.imageContainer}>
-                    <img src={imageUrl} alt="Article Image" className={styles.image} />
-                </div>
-            </div>
+            
         </div>
     );
 };
 
-export default ArticleSection;
+export default ArticleSectionAndPicture;
